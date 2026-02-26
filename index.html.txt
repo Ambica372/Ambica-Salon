@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ambica Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔴 REPLACE WITH YOUR GTM CODE -->
+  <!-- Google Tag Manager -->
+
+</head>
+
+<body style="font-family: Arial; text-align: center;">
+
+  <h1>Ambica Salon 💇‍♀️</h1>
+  <p>Premium Hair & Beauty Services</p>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#services">Services</a> |
+    <a href="#offers">Offers</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <br><br>
+
+  <!-- BOOK BUTTON (Click Tracking) -->
+  <button id="bookBtn">Book Appointment</button>
+
+  <br><br>
+
+  <!-- OUTBOUND LINK -->
+  <a href="https://instagram.com" target="_blank">
+    Visit Our Instagram
+  </a>
+
+  <br><br>
+
+  <!-- FILE DOWNLOAD -->
+  <h2>Download Price List</h2>
+  <a href="price-list.pdf" download>
+    Download Price PDF
+  </a>
+
+  <br><br>
+
+  <!-- INTERNAL SEARCH -->
+  <h2>Search Service</h2>
+  <input type="text" placeholder="Search for hair spa, haircut..." id="searchBox">
+  <button onclick="searchService()">Search</button>
+
+  <br><br>
+
+  <!-- VIDEO SECTION (Video Tracking) -->
+  <h2>Watch Our Salon Tour</h2>
+  <video width="320" height="240" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+
+  <br><br>
+
+  <!-- SERVICES SECTION -->
+  <h2 id="services">Our Services</h2>
+  <p>Haircut</p>
+  <p>Hair Spa</p>
+  <p>Facial</p>
+  <p>Bridal Makeup</p>
+
+  <br><br>
+
+  <!-- OFFERS SECTION -->
+  <h2 id="offers">Special Offer 🎉</h2>
+  <p>Get 20% off on your first booking!</p>
+
+  <button id="offerBtn">Claim Offer</button>
+
+  <br><br>
+
+  <!-- CONTACT FORM (Form Tracking) -->
+  <h2 id="contact">Contact Us</h2>
+
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required><br><br>
+    <input type="email" placeholder="Email" required><br><br>
+    <select>
+      <option>Haircut</option>
+      <option>Hair Spa</option>
+      <option>Facial</option>
+    </select><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <p>Scroll down to explore more ✨</p>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <!-- JAVASCRIPT FOR EVENTS -->
+  <script>
+    document.getElementById("bookBtn").addEventListener("click", function() {
+        alert("Booking Clicked");
+    });
+
+    document.getElementById("offerBtn").addEventListener("click", function() {
+        alert("Offer Claimed");
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Form Submitted");
+    });
+
+    function searchService(){
+        alert("Search Used");
+    }
+  </script>
+
+</body>
+</html>
