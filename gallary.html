@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Salon Gallery</title>
+<title>Gallery</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">Ambica Salon</div>
+<div class="logo" onclick="goHome()">Ambica Salon</div>
 
 <nav>
 <a href="index.html">Home</a>
@@ -21,15 +22,23 @@
 
 </header>
 
-<section class="services">
+<section class="section">
 
 <h2>Salon Gallery</h2>
 
-<div class="card">Hair Styling</div>
-<div class="card">Bridal Makeup</div>
-<div class="card">Facial Treatment</div>
+<div class="card">
+<button onclick="viewGallery('Hair Styling')">View Hair Styling</button>
+</div>
 
-<button class="cta">View More Gallery</button>
+<div class="card">
+<button onclick="viewGallery('Bridal Makeup')">View Bridal Makeup</button>
+</div>
+
+<div class="card">
+<button onclick="viewGallery('Facial Treatment')">View Facial</button>
+</div>
+
+<button onclick="alert('Loading more images')">Load More Gallery</button>
 
 </section>
 
