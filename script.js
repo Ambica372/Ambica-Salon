@@ -1,7 +1,7 @@
+window.dataLayer = window.dataLayer || [];
+
 function track(eventName){
-if(window.dataLayer){
 dataLayer.push({event:eventName})
-}
 }
 
 function goHome(){
@@ -28,8 +28,6 @@ window.location.href="booking.html?service="+service
 function downloadFile(){
 track("brochure_download")
 
-alert("Downloading brochure")
-
 const link=document.createElement("a")
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
 link.download="AmbicaSalonBrochure.pdf"
@@ -45,13 +43,10 @@ document.getElementById("insta").style.display="none"
 document.getElementById("youtube").style.display="none"
 
 document.getElementById(tab).style.display="block"
-
-alert("Showing "+tab+" reviews")
 }
 
 function videoStart(){
 track("video_start")
-alert("Video started")
 }
 
 function openImage(name){
@@ -72,8 +67,6 @@ alert("Offer applied: "+code)
 function downloadCoupon(){
 
 track("coupon_download")
-
-alert("Downloading coupon")
 
 const link=document.createElement("a")
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
@@ -105,7 +98,5 @@ const service=params.get("service")
 if(service && document.getElementById("service")){
 document.getElementById("service").value=service
 }
-
-track("page_view")
 
 }
