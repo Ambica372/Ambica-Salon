@@ -1,144 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  
-<!-- Google Tag Manager -->
+
+<title>Contact</title>
+
 <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id=
-GTM-5M3D67QG'+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','
-GTM-5M3D67QG');
+function trackEvent(name){
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({event:name});
+}
 </script>
-<!-- End Google Tag Manager -->
-
-  
-<title>Contact - Ambica Salon</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script src="script.js"></script>
 
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=
-GTM-5M3D67QG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
 
-<header>
+<h1>Contact Ambica Salon</h1>
 
-<div class="logo" onclick="goHome()">Ambica Salon</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="offers.html">Offers</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<button onclick="navigate('contact.html')">Book Appointment</button>
-
-</header>
-
-
-<section class="section">
-
-<h2>Contact Ambica Salon</h2>
-
-<p>Visit our salon or book an appointment with our beauty experts.</p>
-
-</section>
-
-
-<!-- CONTACT DETAILS -->
-
-<section class="section">
-
-<div class="card">
-
-<h3>📍 Salon Address</h3>
-
-<p>123 Beauty Street</p>
-<p>Bangalore, India</p>
-
-<a href="https://maps.google.com" target="_blank">
-<button>Open in Google Maps</button>
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>📞 Phone</h3>
-
-<p>+91 98765 43210</p>
-
-<a href="tel:+919876543210">
+<a href="tel:+919876543210" onclick="trackEvent('phone_click')">
 <button>Call Now</button>
 </a>
 
-</div>
-
-
-<div class="card">
-
-<h3>📧 Email</h3>
-
-<p>contact@ambicasalon.com</p>
-
-<a href="mailto:contact@ambicasalon.com">
-<button>Send Email</button>
+<a href="mailto:contact@ambicasalon.com" onclick="trackEvent('email_click')">
+<button>Email</button>
 </a>
 
-</div>
+<a href="https://maps.google.com" target="_blank" onclick="trackEvent('map_open_click')">
+<button>Open Map</button>
+</a>
 
+<h2>Book Appointment</h2>
 
-<div class="card">
+<form onsubmit="trackEvent('appointment_submit')">
 
-<h3>🕒 Working Hours</h3>
+<input type="text" placeholder="Name"
+onfocus="trackEvent('form_name_focus')">
 
-<p>Mon – Sat : 10 AM – 7 PM</p>
-<p>Sunday : Closed</p>
+<input type="text" placeholder="Phone"
+onfocus="trackEvent('form_phone_focus')">
 
-</div>
+<select onchange="trackEvent('service_select')">
 
+<option>Hair Styling</option>
+<option>Makeup</option>
+<option>Facial</option>
 
-<footer>
-<h3>Ambica Salon</h3>
+</select>
 
-<p>Luxury Beauty & Hair Studio</p>
+<button type="submit">Submit</button>
 
-<div class="footer-links">
-
-<a href="https://instagram.com" target="_blank">Instagram</a>
-
-<a href="https://facebook.com" target="_blank">Facebook</a>
-
-<a href="https://youtube.com" target="_blank">YouTube</a>
-
-</div>
-
-<p class="copyright">
-© 2026 Ambica Salon • All Rights Reserved
-</p>
-
-</footer>
-
+</form>
 
 </body>
 </html>
