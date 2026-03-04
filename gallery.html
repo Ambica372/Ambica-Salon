@@ -33,17 +33,45 @@ height="0" width="0"></iframe>
 
 <header>
 
-<div class="logo" onclick="goHome()">Ambica Salon</div>
+<h1 onclick="trackEvent('navigation_click','logo','global');location.href='index.html';">
+Ambica Salon
+</h1>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="offers.html">Offers</a>
-<a href="contact.html">Contact</a>
+
+<a href="index.html"
+onclick="trackEvent('navigation_click','home_menu','header')">
+Home
+</a>
+
+<a href="services.html"
+onclick="trackEvent('navigation_click','services_menu','header')">
+Services
+</a>
+
+<a href="gallery.html"
+onclick="trackEvent('navigation_click','gallery_menu','header')">
+Gallery
+</a>
+
+<a href="offers.html"
+onclick="trackEvent('navigation_click','offers_menu','header')">
+Offers
+</a>
+
+<a href="contact.html"
+onclick="trackEvent('navigation_click','contact_menu','header')">
+Contact
+</a>
+
 </nav>
 
-<button onclick="navigate('contact.html')">Book Appointment</button>
+<button
+onclick="trackEvent('cta_click','book_appointment_header','header');location.href='book.html';">
+
+Book Appointment
+
+</button>
 
 </header>
 
