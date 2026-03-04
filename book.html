@@ -2,76 +2,147 @@
 <html>
 
 <head>
+
 <title>Book Appointment - Ambica Salon</title>
+
 <link rel="stylesheet" href="style.css">
 
+<!-- GTM -->
 <script>
 window.dataLayer = window.dataLayer || [];
+</script>
 
-function trackEvent(name){
-dataLayer.push({event:name});
-console.log(name);
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG'+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3D67QG');
+</script>
+
+
+<script>
+
+function trackEvent(eventName, element, page){
+
+window.dataLayer.push({
+event:eventName,
+element_name:element,
+page_name:page
+});
+
+console.log(eventName,element,page);
+
 }
+
 </script>
 
 </head>
 
 <body>
 
+
+<!-- GTM NOSCRIPT -->
+
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
+height="0" width="0" style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+
+
+
 <header>
 
-<h1 onclick="location.href='index.html';trackEvent('logo_click')">
+<h1 onclick="trackEvent('navigation_click','logo','global');location.href='index.html';">
+
 Ambica Salon
+
 </h1>
+
 
 <nav>
 
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="offers.html">Offers</a>
-<a href="contact.html">Contact</a>
+<a href="index.html"
+onclick="trackEvent('navigation_click','home_menu','header')">
+Home
+</a>
+
+<a href="services.html"
+onclick="trackEvent('navigation_click','services_menu','header')">
+Services
+</a>
+
+<a href="gallery.html"
+onclick="trackEvent('navigation_click','gallery_menu','header')">
+Gallery
+</a>
+
+<a href="offers.html"
+onclick="trackEvent('navigation_click','offers_menu','header')">
+Offers
+</a>
+
+<a href="contact.html"
+onclick="trackEvent('navigation_click','contact_menu','header')">
+Contact
+</a>
 
 </nav>
 
 </header>
 
 
+
 <section>
 
 <h2>Book Your Appointment</h2>
 
-<form onsubmit="trackEvent('appointment_submit')">
+
+<form onsubmit="trackEvent('form_submit','appointment_form','contact')">
 
 
 <label>Name</label>
+
 <br>
+
 <input type="text"
 required
-onfocus="trackEvent('name_field_focus')">
+onfocus="trackEvent('form_focus','name_field','appointment')">
 
 
 <br><br>
+
 
 
 <label>Phone</label>
+
 <br>
+
 <input type="tel"
 required
-onfocus="trackEvent('phone_field_focus')">
+onfocus="trackEvent('form_focus','phone_field','appointment')">
 
 
 <br><br>
 
 
+
 <label>Select Service</label>
+
 <br>
 
-<select onchange="trackEvent('service_selected')">
+<select onchange="trackEvent('service_selected','service_dropdown','appointment')">
 
 <option>Select Service</option>
+
 <option>Hair Styling</option>
+
 <option>Bridal Makeup</option>
+
 <option>Facial</option>
 
 </select>
@@ -80,17 +151,21 @@ onfocus="trackEvent('phone_field_focus')">
 <br><br>
 
 
+
 <label>Select Date</label>
+
 <br>
 
 <input type="date"
-onfocus="trackEvent('date_field_focus')">
+onfocus="trackEvent('form_focus','date_field','appointment')">
 
 
 <br><br>
 
 
-<button type="submit">
+
+<button type="submit"
+onclick="trackEvent('cta_click','confirm_appointment','appointment')">
 
 Confirm Appointment
 
@@ -102,33 +177,41 @@ Confirm Appointment
 </section>
 
 
+
 <footer>
 
 <p>Follow Ambica Salon</p>
 
-<a href="https://instagram.com" target="_blank"
-onclick="trackEvent('instagram_click')">
+
+<a href="https://instagram.com"
+target="_blank"
+onclick="trackEvent('outbound_click','instagram','footer')">
 
 Instagram
 
 </a>
 
-<a href="https://facebook.com" target="_blank"
-onclick="trackEvent('facebook_click')">
+
+<a href="https://facebook.com"
+target="_blank"
+onclick="trackEvent('outbound_click','facebook','footer')">
 
 Facebook
 
 </a>
 
-<a href="https://youtube.com" target="_blank"
-onclick="trackEvent('youtube_click')">
+
+<a href="https://youtube.com"
+target="_blank"
+onclick="trackEvent('outbound_click','youtube','footer')">
 
 YouTube
 
 </a>
 
+
 </footer>
 
-</body>
 
+</body>
 </html>
