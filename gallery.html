@@ -1,29 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Gallery</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
 <script>
-function trackEvent(name){
 window.dataLayer = window.dataLayer || [];
-dataLayer.push({event:name});
-}
+</script>
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s);
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG';
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
 
 </head>
 
 <body>
 
-<h1>Salon Gallery</h1>
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
+height="0" width="0"></iframe>
+</noscript>
 
-<img src="img1.jpg">
-<img src="img2.jpg">
-<img src="img3.jpg">
+<header>
 
-<button onclick="trackEvent('gallery_load_more')">
-Load More
-</button>
+<div class="logo" onclick="goHome()">Ambica Salon</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<button onclick="navigate('contact.html')">Book Appointment</button>
+
+</header>
+
+<section class="section">
+
+<h2>Salon Gallery</h2>
+
+<div class="card">
+<button onclick="openImage('Hair Styling')">View Hair Styling</button>
+</div>
+
+<div class="card">
+<button onclick="openImage('Bridal Makeup')">View Bridal Makeup</button>
+</div>
+
+<div class="card">
+<button onclick="openImage('Facial Treatment')">View Facial Treatment</button>
+</div>
+
+<button onclick="loadMoreGallery()">Load More Images</button>
+
+</section>
+
+<footer>
+<a href="https://instagram.com">Instagram</a>
+</footer>
 
 </body>
 </html>
