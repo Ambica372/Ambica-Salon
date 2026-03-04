@@ -3,21 +3,32 @@
 
 <head>
 
-<title>Offers</title>
+<title>Offers - Ambica Salon</title>
+
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
+
+function trackEvent(eventName, element, page){
+window.dataLayer.push({
+event:eventName,
+element_name:element,
+page_name:page
+});
+console.log(eventName,element,page);
+}
 </script>
 
+<!-- GTM -->
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});
 var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s);
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
 j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG';
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG'+dl;
 f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
@@ -26,47 +37,164 @@ f.parentNode.insertBefore(j,f);
 
 <body>
 
+<!-- GTM NOSCRIPT -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
-height="0" width="0"></iframe>
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+
 
 <header>
 
-<div class="logo" onclick="goHome()">Ambica Salon</div>
+<div class="logo"
+onclick="trackEvent('navigation_click','logo','header');location.href='index.html';">
+
+Ambica Salon
+
+</div>
+
 
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="offers.html">Offers</a>
-<a href="contact.html">Contact</a>
+
+<a href="index.html"
+onclick="trackEvent('navigation_click','home_menu','header')">
+
+Home
+
+</a>
+
+<a href="services.html"
+onclick="trackEvent('navigation_click','services_menu','header')">
+
+Services
+
+</a>
+
+<a href="gallery.html"
+onclick="trackEvent('navigation_click','gallery_menu','header')">
+
+Gallery
+
+</a>
+
+<a href="offers.html"
+onclick="trackEvent('navigation_click','offers_menu','header')">
+
+Offers
+
+</a>
+
+<a href="contact.html"
+onclick="trackEvent('navigation_click','contact_menu','header')">
+
+Contact
+
+</a>
+
 </nav>
 
-<button onclick="navigate('contact.html')">Book Appointment</button>
+
+<button
+onclick="trackEvent('cta_click','book_appointment_header','header');location.href='book.html';">
+
+Book Appointment
+
+</button>
 
 </header>
 
+
+
 <section class="section">
 
-<h2>Special Offers</h2>
+<h2>Special Salon Offers</h2>
+
+<p>Enjoy exclusive discounts on our beauty services.</p>
+
 
 <div class="card">
+
 <h3>Bridal Package</h3>
-<button onclick="applyOffer('BRIDAL20')">Claim Offer</button>
+
+<p>Get 20% OFF on Bridal Makeup</p>
+
+<button
+onclick="trackEvent('offer_claim','bridal_package','offers');applyOffer('BRIDAL20')">
+
+Claim Offer
+
+</button>
+
 </div>
+
+
 
 <div class="card">
+
 <h3>Facial Combo</h3>
-<button onclick="applyOffer('FACIAL15')">Claim Offer</button>
+
+<p>15% OFF on Facial + Cleanup</p>
+
+<button
+onclick="trackEvent('offer_claim','facial_combo','offers');applyOffer('FACIAL15')">
+
+Claim Offer
+
+</button>
+
 </div>
 
-<button onclick="downloadCoupon()">Download Coupon</button>
+
+
+<button
+onclick="trackEvent('download_click','offer_coupon','offers');downloadCoupon()">
+
+Download Coupon
+
+</button>
 
 </section>
 
+
+
 <footer>
-<a href="https://facebook.com">Facebook</a>
+
+<h3>Ambica Salon</h3>
+
+<p>Luxury Beauty & Hair Studio</p>
+
+<div class="footer-links">
+
+<a href="https://instagram.com"
+target="_blank"
+onclick="trackEvent('outbound_click','instagram','footer')">
+
+Instagram
+
+</a>
+
+
+<a href="https://facebook.com"
+target="_blank"
+onclick="trackEvent('outbound_click','facebook','footer')">
+
+Facebook
+
+</a>
+
+
+<a href="https://youtube.com"
+target="_blank"
+onclick="trackEvent('outbound_click','youtube','footer')">
+
+YouTube
+
+</a>
+
+</div>
+
+<p>© 2026 Ambica Salon</p>
+
 </footer>
 
 </body>
