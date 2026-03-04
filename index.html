@@ -4,9 +4,7 @@
 <head>
 
 <title>Ambica Salon</title>
-
 <link rel="stylesheet" href="style.css">
-
 <script src="script.js"></script>
 
 <!-- GTM -->
@@ -16,9 +14,12 @@ window.dataLayer = window.dataLayer || [];
 
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG'+dl;
+f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
 
@@ -26,81 +27,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
 
+<!-- GTM noscript -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
-height="0" width="0"></iframe>
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <header>
 
-<h1 onclick="trackEvent('navigation_click','logo','home')">
-Ambica Salon
-</h1>
+<div class="logo" onclick="goHome()">Ambica Salon</div>
 
 <nav>
-
-<a href="services.html"
-onclick="trackEvent('navigation_click','services_menu','home')">Services</a>
-
-<a href="gallery.html"
-onclick="trackEvent('navigation_click','gallery_menu','home')">Gallery</a>
-
-<a href="offers.html"
-onclick="trackEvent('navigation_click','offers_menu','home')">Offers</a>
-
-<a href="contact.html"
-onclick="trackEvent('navigation_click','contact_menu','home')">Contact</a>
-
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<button
-onclick="trackEvent('cta_click','book_appointment','home')">
-Book Appointment
-</button>
+<button onclick="navigate('contact.html')">Book Appointment</button>
 
 </header>
 
-<section>
+<section class="hero">
 
-<h2>Luxury Beauty Salon</h2>
+<h1>Luxury Beauty Experience</h1>
 
-<button
-onclick="trackEvent('service_click','hair_styling','home')">
-View Hair Styling
-</button>
+<p>Hair • Skin • Bridal</p>
 
-<button
-onclick="trackEvent('service_click','makeup_services','home')">
-View Makeup Services
-</button>
+<button onclick="navigate('services.html')">Explore Services</button>
 
 </section>
 
-<section>
+<section class="section">
 
-<h2>Salon Intro Video</h2>
+<h2>Popular Services</h2>
 
-<video width="500" controls
-onplay="trackEvent('video_start','salon_intro','home')">
+<div class="card">
+<h3>Hair Styling</h3>
+<button onclick="showService('Hair Styling')">See Details</button>
+<button onclick="bookService('Hair Styling')">Book Now</button>
+</div>
 
-<source src="salon.mp4" type="video/mp4">
+<div class="card">
+<h3>Facial Treatment</h3>
+<button onclick="showService('Facial Treatment')">See Details</button>
+<button onclick="bookService('Facial Treatment')">Book Now</button>
+</div>
 
+<div class="card">
+<h3>Bridal Makeup</h3>
+<button onclick="showService('Bridal Makeup')">See Details</button>
+<button onclick="bookService('Bridal Makeup')">Book Now</button>
+</div>
+
+<button onclick="downloadFile()">Download Service Brochure</button>
+
+</section>
+
+<section class="section">
+
+<h2>Customer Reviews</h2>
+
+<button class="tab-btn" onclick="showTab('google')">Google</button>
+<button class="tab-btn" onclick="showTab('insta')">Instagram</button>
+<button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
+
+<div id="google">
+<p>⭐⭐⭐⭐⭐ Best salon experience</p>
+</div>
+
+<div id="insta" style="display:none">
+<p>Instagram clients love our services</p>
+</div>
+
+<div id="youtube" style="display:none">
+<p>Watch transformations on YouTube</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Salon Experience Video</h2>
+
+<video width="500" controls onplay="videoStart()">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4">
 </video>
 
 </section>
 
 <footer>
 
-<a href="https://instagram.com"
-onclick="trackEvent('social_click','instagram','home')"
-target="_blank">Instagram</a>
+<p>Follow Us</p>
 
-<a href="https://facebook.com"
-onclick="trackEvent('social_click','facebook','home')"
-target="_blank">Facebook</a>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+<a href="https://facebook.com" target="_blank">Facebook</a>
+<a href="https://youtube.com" target="_blank">YouTube</a>
 
 </footer>
 
 </body>
-
 </html>
