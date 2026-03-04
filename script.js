@@ -1,123 +1,111 @@
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+function track(eventName){
+if(window.dataLayer){
+dataLayer.push({event:eventName})
+}
 }
 
-body{
-background:#fff0f5;
-color:#333;
-line-height:1.6;
+function goHome(){
+track("logo_click")
+window.location.href="index.html"
 }
 
-/* HEADER */
-
-header{
-background:#ff4f81;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
+function navigate(page){
+track("navigation_click")
+window.location.href=page
 }
 
-header h1{
-font-size:26px;
-cursor:pointer;
+function showService(service){
+track("service_details_click")
+alert("Viewing service details: "+service)
 }
 
-/* NAVIGATION */
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 12px;
-font-weight:500;
+function bookService(service){
+track("service_booking_click")
+alert("Booking started for "+service)
+window.location.href="booking.html?service="+service
 }
 
-nav a:hover{
-text-decoration:underline;
+function downloadFile(){
+track("brochure_download")
+
+alert("Downloading brochure")
+
+const link=document.createElement("a")
+link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+link.download="AmbicaSalonBrochure.pdf"
+link.click()
 }
 
-/* PAGE SECTIONS */
+function showTab(tab){
 
-section{
-padding:50px 40px;
-text-align:center;
+track("review_tab_click")
+
+document.getElementById("google").style.display="none"
+document.getElementById("insta").style.display="none"
+document.getElementById("youtube").style.display="none"
+
+document.getElementById(tab).style.display="block"
+
+alert("Showing "+tab+" reviews")
 }
 
-/* SERVICE CARDS */
-
-section div{
-background:white;
-padding:25px;
-margin:20px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-display:inline-block;
-width:250px;
-vertical-align:top;
+function videoStart(){
+track("video_start")
+alert("Video started")
 }
 
-/* BUTTONS */
-
-button{
-background:#ff4f81;
-color:white;
-border:none;
-padding:10px 18px;
-border-radius:20px;
-cursor:pointer;
-font-size:14px;
-margin-top:10px;
+function openImage(name){
+track("gallery_image_click")
+alert("Viewing gallery: "+name)
 }
 
-button:hover{
-background:#e63a6f;
+function loadMoreGallery(){
+track("gallery_load_more")
+alert("More images loaded")
 }
 
-/* FORM */
-
-form{
-background:white;
-max-width:420px;
-margin:auto;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 20px rgba(0,0,0,0.1);
+function applyOffer(code){
+track("offer_claim")
+alert("Offer applied: "+code)
 }
 
-input, select{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:6px;
+function downloadCoupon(){
+
+track("coupon_download")
+
+alert("Downloading coupon")
+
+const link=document.createElement("a")
+link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+link.download="SalonCoupon.pdf"
+link.click()
 }
 
-input:focus, select:focus{
-outline:none;
-border-color:#ff4f81;
+function submitForm(){
+
+track("form_submit")
+
+let name=document.getElementById("name").value
+
+if(name==""){
+track("form_error")
+alert("Enter your name")
+return false
 }
 
-/* FOOTER */
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:40px;
+alert("Appointment booked successfully!")
 }
 
-footer a{
-color:#ff8fb1;
-text-decoration:none;
-margin:0 8px;
+window.onload=function(){
+
+const params=new URLSearchParams(window.location.search)
+
+const service=params.get("service")
+
+if(service && document.getElementById("service")){
+document.getElementById("service").value=service
 }
 
-footer a:hover{
-color:white;
+track("page_view")
+
 }
