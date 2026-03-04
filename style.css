@@ -16,12 +16,14 @@ align-items:center;
 .logo{
 font-size:24px;
 font-weight:bold;
+cursor:pointer;
 }
 
 nav a{
 color:white;
 margin:15px;
 text-decoration:none;
+cursor:pointer;
 }
 
 .hero{
@@ -30,15 +32,7 @@ padding:80px;
 text-align:center;
 }
 
-.cta{
-background:#ff1493;
-color:white;
-padding:12px 25px;
-border:none;
-cursor:pointer;
-}
-
-.services{
+.section{
 padding:60px;
 text-align:center;
 }
@@ -53,51 +47,19 @@ border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.download-btn{
-background:#4CAF50;
+button{
+background:#ff1493;
 color:white;
-padding:10px 20px;
+padding:12px 25px;
 border:none;
 cursor:pointer;
-}
-
-.tabs{
-text-align:center;
-padding:40px;
+margin-top:10px;
 }
 
 .tab-btn{
 background:#f06292;
-border:none;
 padding:10px 20px;
 margin:5px;
-color:white;
-cursor:pointer;
-}
-
-.video-section{
-text-align:center;
-padding:50px;
-background:#ffe4ec;
-}
-
-.form-section{
-padding:50px;
-text-align:center;
-}
-
-input{
-padding:10px;
-margin:10px;
-width:250px;
-}
-
-.submit{
-background:#c2185b;
-color:white;
-padding:10px 20px;
-border:none;
-cursor:pointer;
 }
 
 footer{
