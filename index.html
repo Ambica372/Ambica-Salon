@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Ambica Salon</title>
+
 <link rel="stylesheet" href="style.css">
+
 <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -13,20 +18,27 @@
 <div class="logo" onclick="goHome()">Ambica Salon</div>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="services.html">Services</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="offers.html">Offers</a>
+
 <a href="contact.html">Contact</a>
+
 </nav>
 
-<button onclick="window.location.href='contact.html'">Book Appointment</button>
+<button onclick="bookService('General Booking')">Book Appointment</button>
 
 </header>
 
 <section class="hero">
 
 <h1>Luxury Beauty Experience</h1>
+
 <p>Hair • Skin • Bridal • Spa</p>
 
 <button onclick="window.location.href='services.html'">Explore Services</button>
@@ -38,18 +50,33 @@
 <h2>Popular Services</h2>
 
 <div class="card">
+
 <h3>Hair Styling</h3>
+
 <button onclick="showService('Hair Styling')">See Details</button>
+
+<button onclick="bookService('Hair Styling')">Book Now</button>
+
 </div>
 
 <div class="card">
+
 <h3>Facial Treatment</h3>
+
 <button onclick="showService('Facial Treatment')">See Details</button>
+
+<button onclick="bookService('Facial Treatment')">Book Now</button>
+
 </div>
 
 <div class="card">
+
 <h3>Bridal Makeup</h3>
+
 <button onclick="showService('Bridal Makeup')">See Details</button>
+
+<button onclick="bookService('Bridal Makeup')">Book Now</button>
+
 </div>
 
 <button onclick="downloadFile()">Download Service Brochure</button>
@@ -61,19 +88,27 @@
 <h2>Customer Reviews</h2>
 
 <button class="tab-btn" onclick="showTab('google')">Google Reviews</button>
+
 <button class="tab-btn" onclick="showTab('insta')">Instagram Reviews</button>
+
 <button class="tab-btn" onclick="showTab('youtube')">YouTube Reviews</button>
 
 <div id="google">
+
 <p>⭐⭐⭐⭐⭐ Amazing salon experience!</p>
+
 </div>
 
 <div id="insta" style="display:none">
+
 <p>Customers love our styling.</p>
+
 </div>
 
 <div id="youtube" style="display:none">
+
 <p>Watch our transformations.</p>
+
 </div>
 
 </section>
@@ -83,7 +118,9 @@
 <h2>Salon Experience Video</h2>
 
 <video width="500" controls onplay="videoStart()">
+
 <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+
 </video>
 
 </section>
@@ -93,10 +130,13 @@
 <p>Follow Us</p>
 
 <a href="https://instagram.com" target="_blank">Instagram</a>
+
 <a href="https://facebook.com" target="_blank">Facebook</a>
+
 <a href="https://youtube.com" target="_blank">YouTube</a>
 
 </footer>
 
 </body>
+
 </html>
