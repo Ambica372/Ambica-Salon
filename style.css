@@ -1,75 +1,106 @@
-body{
-font-family:Arial;
-margin:0;
-background:#fff0f5;
+function goHome(){
+window.location.href="index.html"
 }
 
-header{
-background:#c2185b;
-color:white;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+function bookService(service){
+
+alert("Booking for "+service+" selected")
+
+window.location.href="contact.html?service="+encodeURIComponent(service)
+
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
-cursor:pointer;
+function showService(name){
+
+alert(name+" service details page opened")
+
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-cursor:pointer;
+function downloadFile(){
+
+alert("Downloading Ambica Salon brochure")
+
+const link=document.createElement("a")
+
+link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
+link.download="AmbicaSalonBrochure.pdf"
+
+link.click()
+
 }
 
-.hero{
-background:linear-gradient(to right,#ff9a9e,#fad0c4);
-padding:80px;
-text-align:center;
+function showTab(tab){
+
+document.getElementById("google").style.display="none"
+document.getElementById("insta").style.display="none"
+document.getElementById("youtube").style.display="none"
+
+document.getElementById(tab).style.display="block"
+
 }
 
-.section{
-padding:60px;
-text-align:center;
+function videoStart(){
+
+console.log("Video Started Event")
+
+alert("Video started")
+
 }
 
-.card{
-background:white;
-padding:20px;
-margin:20px;
-display:inline-block;
-width:250px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+function openImage(name){
+
+alert("Opening gallery preview: "+name)
+
 }
 
-button{
-background:#ff1493;
-color:white;
-padding:12px 25px;
-border:none;
-cursor:pointer;
-margin-top:10px;
+function loadMoreGallery(){
+
+alert("Loading more gallery photos")
+
 }
 
-.tab-btn{
-background:#f06292;
-padding:10px 20px;
-margin:5px;
+function applyOffer(code){
+
+alert("Offer applied: "+code)
+
 }
 
-footer{
-background:#333;
-color:white;
-padding:30px;
-text-align:center;
+function downloadCoupon(){
+
+alert("Coupon downloaded")
+
+const link=document.createElement("a")
+
+link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
+link.download="AmbicaSalonCoupon.pdf"
+
+link.click()
+
 }
 
-footer a{
-color:#ff80ab;
-margin:10px;
+function submitForm(){
+
+let name=document.getElementById("name").value
+
+if(name==""){
+alert("Please enter your name")
+return false
+}
+
+alert("Appointment booked successfully!")
+
+}
+
+window.onload=function(){
+
+const params=new URLSearchParams(window.location.search)
+
+const service=params.get("service")
+
+if(service && document.getElementById("service")){
+document.getElementById("service").value=service
+}
+
 }
