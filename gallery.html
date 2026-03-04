@@ -3,21 +3,33 @@
 
 <head>
 
-<title>Gallery</title>
+<title>Gallery - Ambica Salon</title>
+
 <link rel="stylesheet" href="style.css">
+
 <script src="script.js"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
+
+function trackEvent(eventName, element, page){
+window.dataLayer.push({
+event:eventName,
+element_name:element,
+page_name:page
+});
+console.log(eventName,element,page);
+}
 </script>
 
+<!-- GTM -->
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});
 var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s);
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
 j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG';
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG'+dl;
 f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
@@ -28,14 +40,15 @@ f.parentNode.insertBefore(j,f);
 
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
-height="0" width="0"></iframe>
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <header>
 
-<h1 onclick="trackEvent('navigation_click','logo','global');location.href='index.html';">
+<div class="logo"
+onclick="trackEvent('navigation_click','logo','header');location.href='index.html';">
 Ambica Salon
-</h1>
+</div>
 
 <nav>
 
@@ -68,35 +81,72 @@ Contact
 
 <button
 onclick="trackEvent('cta_click','book_appointment_header','header');location.href='book.html';">
-
 Book Appointment
-
 </button>
 
 </header>
+
+
 
 <section class="section">
 
 <h2>Salon Gallery</h2>
 
 <div class="card">
-<button onclick="openImage('Hair Styling')">View Hair Styling</button>
+
+<button
+onclick="trackEvent('gallery_click','hair_styling_gallery','gallery');openImage('Hair Styling')">
+View Hair Styling
+</button>
+
 </div>
+
 
 <div class="card">
-<button onclick="openImage('Bridal Makeup')">View Bridal Makeup</button>
+
+<button
+onclick="trackEvent('gallery_click','bridal_makeup_gallery','gallery');openImage('Bridal Makeup')">
+View Bridal Makeup
+</button>
+
 </div>
+
 
 <div class="card">
-<button onclick="openImage('Facial Treatment')">View Facial Treatment</button>
+
+<button
+onclick="trackEvent('gallery_click','facial_gallery','gallery');openImage('Facial Treatment')">
+View Facial Treatment
+</button>
+
 </div>
 
-<button onclick="loadMoreGallery()">Load More Images</button>
+
+<button
+onclick="trackEvent('gallery_load','load_more_gallery','gallery');loadMoreGallery()">
+
+Load More Images
+
+</button>
 
 </section>
 
+
+
 <footer>
-<a href="https://instagram.com">Instagram</a>
+
+<h3>Ambica Salon</h3>
+
+<p>Luxury Beauty & Hair Studio</p>
+
+<a href="https://instagram.com"
+target="_blank"
+onclick="trackEvent('outbound_click','instagram','footer')">
+
+Instagram
+
+</a>
+
 </footer>
 
 </body>
