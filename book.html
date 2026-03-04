@@ -38,6 +38,17 @@ console.log(eventName,element,page);
 
 }
 
+/* prevent form reload and fire event */
+function submitAppointment(){
+
+trackEvent('form_submit','appointment_form','appointment')
+
+alert("Appointment submitted successfully")
+
+return false
+
+}
+
 </script>
 
 </head>
@@ -105,7 +116,7 @@ Book Appointment
 <h2>Book Your Appointment</h2>
 
 
-<form onsubmit="trackEvent('form_submit','appointment_form','contact')">
+<form onsubmit="return submitAppointment()">
 
 
 <label>Name</label>
