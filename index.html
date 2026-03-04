@@ -1,100 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Ambica Salon</title>
 <link rel="stylesheet" href="style.css">
-
-<script>
-
-function showTab(tab){
-
-document.getElementById("google").style.display="none";
-document.getElementById("insta").style.display="none";
-document.getElementById("youtube").style.display="none";
-
-document.getElementById(tab).style.display="block";
-
-}
-
-function downloadBrochure(){
-
-alert("Service brochure downloaded!");
-
-}
-
-function bookScroll(){
-
-window.location.href="contact.html"
-
-}
-
-</script>
-
+<script src="script.js"></script>
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">Ambica Salon</div>
+<div class="logo" onclick="goHome()">Ambica Salon</div>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="gallery.html">Gallery</a>
 <a href="offers.html">Offers</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
-<button class="cta" onclick="bookScroll()">Book Appointment</button>
+<button onclick="window.location.href='contact.html'">Book Appointment</button>
 
 </header>
-
 
 <section class="hero">
 
 <h1>Luxury Beauty Experience</h1>
-
 <p>Hair • Skin • Bridal • Spa</p>
 
-<button class="cta" onclick="bookScroll()">Book Now</button>
+<button onclick="window.location.href='services.html'">Explore Services</button>
 
 </section>
 
-
-<section class="services">
+<section class="section">
 
 <h2>Popular Services</h2>
 
 <div class="card">
 <h3>Hair Styling</h3>
-<p>Professional haircut and styling</p>
-<button class="cta">See Details</button>
+<button onclick="showService('Hair Styling')">See Details</button>
 </div>
 
 <div class="card">
 <h3>Facial Treatment</h3>
-<p>Glow facial treatment</p>
-<button class="cta">See Details</button>
+<button onclick="showService('Facial Treatment')">See Details</button>
 </div>
 
 <div class="card">
 <h3>Bridal Makeup</h3>
-<p>Luxury bridal makeover</p>
-<button class="cta">See Details</button>
+<button onclick="showService('Bridal Makeup')">See Details</button>
 </div>
 
-<br><br>
-
-<button class="download-btn" onclick="downloadBrochure()">Download Service Brochure</button>
+<button onclick="downloadFile()">Download Service Brochure</button>
 
 </section>
 
-
-<section class="tabs">
+<section class="section">
 
 <h2>Customer Reviews</h2>
 
@@ -107,28 +69,24 @@ window.location.href="contact.html"
 </div>
 
 <div id="insta" style="display:none">
-<p>Customers love our styling on Instagram.</p>
+<p>Customers love our styling.</p>
 </div>
 
 <div id="youtube" style="display:none">
-<p>Watch transformation videos on YouTube.</p>
+<p>Watch our transformations.</p>
 </div>
 
 </section>
 
+<section class="section">
 
-<section class="video-section">
+<h2>Salon Experience Video</h2>
 
-<h2>Salon Experience</h2>
-
-<video width="500" controls>
-
+<video width="500" controls onplay="videoStart()">
 <source src="https://www.w3schools.com/html/mov_bbb.mp4">
-
 </video>
 
 </section>
-
 
 <footer>
 
