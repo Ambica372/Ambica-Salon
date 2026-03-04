@@ -1,73 +1,51 @@
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Poppins', sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#fff5f7;
+background:#fff0f5;
 color:#333;
+line-height:1.6;
 }
 
 /* HEADER */
 
 header{
-background:linear-gradient(90deg,#ff8fb1,#ff4f81);
+background:#ff4f81;
 color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
+padding:15px 40px;
 }
 
 header h1{
 font-size:26px;
 cursor:pointer;
-letter-spacing:1px;
 }
+
+/* NAVIGATION */
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
+margin:0 12px;
 font-weight:500;
-transition:0.3s;
 }
 
 nav a:hover{
-color:#ffe2ec;
+text-decoration:underline;
 }
 
-/* BUTTONS */
-
-button{
-background:#ff4f81;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:25px;
-font-size:15px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#ff2e6a;
-transform:scale(1.05);
-}
-
-/* SECTIONS */
+/* PAGE SECTIONS */
 
 section{
-padding:60px 10%;
+padding:50px 40px;
 text-align:center;
-}
-
-section h2{
-font-size:32px;
-margin-bottom:40px;
-color:#ff4f81;
 }
 
 /* SERVICE CARDS */
@@ -76,39 +54,50 @@ section div{
 background:white;
 padding:25px;
 margin:20px;
-border-radius:15px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
 display:inline-block;
-width:260px;
+width:250px;
 vertical-align:top;
-transition:0.3s;
 }
 
-section div:hover{
-transform:translateY(-6px);
+/* BUTTONS */
+
+button{
+background:#ff4f81;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+margin-top:10px;
+}
+
+button:hover{
+background:#e63a6f;
 }
 
 /* FORM */
 
 form{
 background:white;
-padding:35px;
 max-width:420px;
 margin:auto;
-border-radius:15px;
-box-shadow:0 6px 25px rgba(0,0,0,0.1);
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
 }
 
-input,select{
+input, select{
 width:100%;
-padding:12px;
+padding:10px;
 margin:10px 0;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:14px;
+border:1px solid #ccc;
+border-radius:6px;
 }
 
-input:focus,select:focus{
+input:focus, select:focus{
 outline:none;
 border-color:#ff4f81;
 }
@@ -119,31 +108,16 @@ footer{
 background:#222;
 color:white;
 text-align:center;
-padding:30px;
-margin-top:60px;
+padding:25px;
+margin-top:40px;
 }
 
 footer a{
 color:#ff8fb1;
-margin:0 10px;
 text-decoration:none;
-font-weight:500;
+margin:0 8px;
 }
 
 footer a:hover{
 color:white;
-}
-
-/* HERO SECTION */
-
-.hero{
-background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
-height:400px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:40px;
-font-weight:bold;
-text-shadow:0 3px 10px rgba(0,0,0,0.5);
 }
