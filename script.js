@@ -12,27 +12,25 @@ function trackEvent(eventName, element, page){
 
 /* Navigation */
 function goHome(){
-  trackEvent("navigation_click","logo","header");
-  window.location.href="index.html";
+window.location.href="index.html"
 }
 
-function navigate(page){
-  trackEvent("navigation_click","menu_navigation",page);
-  window.location.href=page;
+function openContact(){
+window.location.href="contact.html"
 }
 
-/* Services */
+function openBooking(){
+window.location.href="book.html"
+}
+
 function showService(service){
-  trackEvent("service_view","service_details",service);
-  alert("Viewing service details: " + service);
+alert("Viewing service details: "+service)
 }
 
 function bookService(service){
-  trackEvent("service_booking","book_service",service);
-  alert("Booking started for " + service);
-  window.location.href="appointment.html?service=" + service;
+alert("Booking "+service)
+window.location.href="book.html?service="+service
 }
-
 /* File download */
 function downloadFile(){
   trackEvent("file_download","service_brochure","services");
