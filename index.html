@@ -1,133 +1,259 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ambica Salon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambica Salon</title>
 
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5M3D67QG');</script>
-<!-- End Google Tag Manager -->
-  <!-- Google Tag Manager -->
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#fff0f6;
+}
+
+/* HEADER */
+
+header{
+background:#c2185b;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+cursor:pointer;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(to right,#ff9a9e,#fad0c4);
+padding:80px;
+text-align:center;
+}
+
+.cta{
+background:#ff1493;
+color:white;
+padding:15px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SERVICES */
+
+.services{
+padding:60px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:25px;
+margin:20px;
+width:250px;
+display:inline-block;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* TABS */
+
+.tabs{
+text-align:center;
+padding:40px;
+}
+
+.tab-btn{
+padding:10px 20px;
+margin:5px;
+cursor:pointer;
+background:#f06292;
+color:white;
+border:none;
+}
+
+/* DOWNLOAD */
+
+.download-btn{
+background:#4CAF50;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+margin-top:20px;
+}
+
+/* VIDEO */
+
+.video-section{
+padding:50px;
+text-align:center;
+background:#ffe4ec;
+}
+
+/* FORM */
+
+.form-section{
+padding:60px;
+text-align:center;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+.submit{
+background:#c2185b;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#333;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+footer a{
+color:#ff80ab;
+margin:10px;
+}
+
+</style>
 
 </head>
 
-<body style="font-family: Arial; text-align: center;">
+<body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<header>
 
-  
-  <h1>Ambica Salon 💇‍♀️</h1>
-  <p>Premium Hair & Beauty Services</p>
+<div class="logo">Ambica Salon</div>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="#services">Services</a> |
-    <a href="#offers">Offers</a> |
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
 
-  <br><br>
+<button class="cta">Book Appointment</button>
 
-  <!-- BOOK BUTTON (Click Tracking) -->
-  <button id="bookBtn">Book Appointment</button>
+</header>
 
-  <br><br>
 
-  <!-- OUTBOUND LINK -->
-  <a href="https://instagram.com" target="_blank">
-    Visit Our Instagram
-  </a>
+<section class="hero">
 
-  <br><br>
+<h1>Welcome to Ambica Salon</h1>
 
-  <!-- FILE DOWNLOAD -->
-  <h2>Download Price List</h2>
-  <a href="price-list.pdf" download>
-    Download Price PDF
-  </a>
+<p>Hair • Makeup • Skin Care • Bridal</p>
 
-  <br><br>
+<button class="cta">Explore Services</button>
 
-  <!-- INTERNAL SEARCH -->
-  <h2>Search Service</h2>
-  <input type="text" placeholder="Search for hair spa, haircut..." id="searchBox">
-  <button onclick="searchService()">Search</button>
+</section>
 
-  <br><br>
 
-  <!-- VIDEO SECTION (Video Tracking) -->
-  <h2>Watch Our Salon Tour</h2>
-  <video width="320" height="240" controls>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-  </video>
+<section class="services">
 
-  <br><br>
+<h2>Our Services</h2>
 
-  <!-- SERVICES SECTION -->
-  <h2 id="services">Our Services</h2>
-  <p>Haircut</p>
-  <p>Hair Spa</p>
-  <p>Facial</p>
-  <p>Bridal Makeup</p>
+<div class="card">
+<h3>Hair Styling</h3>
+<p>Professional haircut and styling.</p>
+<button class="cta">See Details</button>
+</div>
 
-  <br><br>
+<div class="card">
+<h3>Facial Treatment</h3>
+<p>Glow facial and skin treatment.</p>
+<button class="cta">See Details</button>
+</div>
 
-  <!-- OFFERS SECTION -->
-  <h2 id="offers">Special Offer 🎉</h2>
-  <p>Get 20% off on your first booking!</p>
+<div class="card">
+<h3>Bridal Makeup</h3>
+<p>Complete bridal makeover.</p>
+<button class="cta">See Details</button>
+</div>
 
-  <button id="offerBtn">Claim Offer</button>
+<button class="download-btn">Download Service Brochure</button>
 
-  <br><br>
+</section>
 
-  <!-- CONTACT FORM (Form Tracking) -->
-  <h2 id="contact">Contact Us</h2>
 
-  <form id="contactForm">
-    <input type="text" placeholder="Name" required><br><br>
-    <input type="email" placeholder="Email" required><br><br>
-    <select>
-      <option>Haircut</option>
-      <option>Hair Spa</option>
-      <option>Facial</option>
-    </select><br><br>
-    <button type="submit">Submit</button>
-  </form>
+<section class="tabs">
 
-  <br><br><br><br><br><br><br><br><br><br>
+<h2>Customer Reviews</h2>
 
-  <p>Scroll down to explore more ✨</p>
+<button class="tab-btn">Google Reviews</button>
+<button class="tab-btn">Instagram Reviews</button>
+<button class="tab-btn">YouTube Reviews</button>
 
-  <br><br><br><br><br><br><br><br><br><br>
+</section>
 
-  <!-- JAVASCRIPT FOR EVENTS -->
-  <script>
-    document.getElementById("bookBtn").addEventListener("click", function() {
-        alert("Booking Clicked");
-    });
 
-    document.getElementById("offerBtn").addEventListener("click", function() {
-        alert("Offer Claimed");
-    });
+<section class="video-section">
 
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-        e.preventDefault();
-        alert("Form Submitted");
-    });
+<h2>Salon Experience Video</h2>
 
-    function searchService(){
-        alert("Search Used");
-    }
-  </script>
+<video width="500" controls>
+
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+
+</video>
+
+</section>
+
+
+<section class="form-section">
+
+<h2>Book Your Appointment</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name"><br>
+<input type="text" placeholder="Phone Number"><br>
+<input type="email" placeholder="Email"><br>
+<input type="text" placeholder="Service Interested"><br>
+
+<button class="submit">Submit Booking</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>Follow Us</p>
+
+<a href="https://instagram.com">Instagram</a>
+<a href="https://facebook.com">Facebook</a>
+<a href="https://youtube.com">YouTube</a>
+
+</footer>
 
 </body>
 </html>
-
-
