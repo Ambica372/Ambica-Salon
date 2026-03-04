@@ -1,11 +1,11 @@
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
 background:#fff0f5;
 }
 
 header{
-background:#c2185b;
+background:#8b1c2e;
 color:white;
 padding:20px;
 display:flex;
@@ -23,6 +23,11 @@ nav a{
 color:white;
 margin:10px;
 text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd1dc;
 }
 
 .hero{
@@ -49,10 +54,15 @@ box-shadow:0 4px 10px rgba(0,0,0,0.1);
 button{
 background:#ff1493;
 color:white;
-padding:12px 20px;
+padding:10px 20px;
 border:none;
 cursor:pointer;
 margin:5px;
+border-radius:5px;
+}
+
+button:hover{
+background:#c2185b;
 }
 
 .tab-btn{
@@ -69,4 +79,5 @@ text-align:center;
 footer a{
 color:#ff80ab;
 margin:10px;
+text-decoration:none;
 }
