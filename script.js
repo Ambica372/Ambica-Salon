@@ -2,19 +2,24 @@ function goHome(){
 window.location.href="index.html"
 }
 
-function showService(name){
-alert(name + " details page would open.")
+function bookService(service){
+window.location.href="contact.html?service="+service
 }
 
-function claimOffer(offer){
-alert("Offer applied: " + offer)
+function showService(name){
+alert(name+" service details opened")
 }
 
 function downloadFile(){
+
 const link=document.createElement("a")
+
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
 link.download="AmbicaSalonBrochure.pdf"
+
 link.click()
+
 }
 
 function showTab(tab){
@@ -31,6 +36,14 @@ function videoStart(){
 alert("Video started")
 }
 
+function openImage(name){
+alert("Opening gallery image: "+name)
+}
+
+function applyOffer(code){
+alert("Coupon applied: "+code)
+}
+
 function submitForm(){
 
 let name=document.getElementById("name").value
@@ -40,21 +53,14 @@ alert("Please enter your name")
 return false
 }
 
-alert("Appointment submitted successfully!")
+alert("Booking submitted successfully!")
 
-}
-
-function viewGallery(img){
-alert("Viewing gallery image: "+img)
-}
-
-function applyOffer(code){
-alert("Coupon Applied: " + code)
 }
 
 window.onload=function(){
 
 const params=new URLSearchParams(window.location.search)
+
 const service=params.get("service")
 
 if(service){
