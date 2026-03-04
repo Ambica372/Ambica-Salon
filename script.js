@@ -1,115 +1,222 @@
 window.dataLayer = window.dataLayer || [];
 
-/* Generic event tracker */
+/* =================================
+   GENERIC TRACK EVENT FUNCTION
+================================= */
+
 function trackEvent(eventName, element, page){
+
   window.dataLayer.push({
     event: eventName,
     element_name: element,
     page_name: page
   });
-  console.log("Event:", eventName, "Element:", element, "Page:", page);
+
+  console.log("Event:",eventName,"Element:",element,"Page:",page);
 }
 
-/* Navigation */
+
+
+/* =================================
+   NAVIGATION FUNCTIONS
+================================= */
+
 function goHome(){
-window.location.href="index.html"
+  trackEvent("navigation_click","logo","header");
+  window.location.href="index.html";
 }
 
 function openContact(){
-window.location.href="contact.html"
+  trackEvent("navigation_click","contact_page","header");
+  window.location.href="contact.html";
 }
 
 function openBooking(){
-window.location.href="book.html"
+  trackEvent("cta_click","book_appointment_header","header");
+  window.location.href="book.html";
 }
+
+
+
+/* =================================
+   SERVICES PAGE
+================================= */
 
 function showService(service){
-alert("Viewing service details: "+service)
+
+  trackEvent("service_details",service,"services");
+
+  alert("Viewing service details: " + service);
 }
+
 
 function bookService(service){
-alert("Booking "+service)
-window.location.href="book.html?service="+service
+
+  trackEvent("cta_click","book_service","services");
+
+  alert("Booking " + service);
+
+  window.location.href="book.html?service=" + service;
 }
-/* File download */
+
+
+
+/* =================================
+   FILE DOWNLOAD
+================================= */
+
 function downloadFile(){
-  trackEvent("file_download","service_brochure","services");
+
+  trackEvent("download_click","service_brochure","services");
 
   const link=document.createElement("a");
+
   link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
   link.download="AmbicaSalonBrochure.pdf";
+
   link.click();
 }
 
-/* Review Tabs */
+
+
+/* =================================
+   REVIEW TABS (HOME PAGE)
+================================= */
+
 function showTab(tab){
-  trackEvent("tab_click","review_tab",tab);
+
+  trackEvent("tab_click",tab,"home");
 
   const tabs=["google","insta","youtube"];
+
   tabs.forEach(function(t){
+
     const el=document.getElementById(t);
-    if(el){ el.style.display="none"; }
+
+    if(el){
+      el.style.display="none";
+    }
+
   });
 
   const active=document.getElementById(tab);
-  if(active){ active.style.display="block"; }
+
+  if(active){
+    active.style.display="block";
+  }
+
 }
 
-/* Video */
+
+
+/* =================================
+   VIDEO EVENTS
+================================= */
+
 function videoStart(){
-  trackEvent("video_start","salon_video","home");
+
+  trackEvent("video_start","salon_experience_video","home");
+
 }
 
-/* Gallery */
+
+
+/* =================================
+   GALLERY PAGE
+================================= */
+
 function openImage(name){
-  trackEvent("gallery_view","gallery_image",name);
+
+  trackEvent("gallery_click",name,"gallery");
+
   alert("Viewing gallery: " + name);
+
 }
+
 
 function loadMoreGallery(){
-  trackEvent("gallery_load","load_more","gallery");
+
+  trackEvent("gallery_load","load_more_images","gallery");
+
   alert("More images loaded");
+
 }
 
-/* Offers */
+
+
+/* =================================
+   OFFERS PAGE
+================================= */
+
 function applyOffer(code){
-  trackEvent("offer_claim","claim_offer",code);
+
+  trackEvent("offer_claim",code,"offers");
+
   alert("Offer applied: " + code);
+
 }
+
+
 
 function downloadCoupon(){
-  trackEvent("coupon_download","offer_coupon","offers");
+
+  trackEvent("download_click","offer_coupon","offers");
 
   const link=document.createElement("a");
+
   link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
   link.download="SalonCoupon.pdf";
+
   link.click();
+
 }
 
-/* Appointment Form */
+
+
+/* =================================
+   BOOK APPOINTMENT FORM
+================================= */
+
 function submitForm(){
-  trackEvent("form_submit","appointment_form","appointment");
+
+  trackEvent("form_submit","appointment_form","book");
 
   let name=document.getElementById("name");
+
   if(name && name.value.trim()===""){
+
     alert("Please enter your name");
+
     return false;
+
   }
 
   alert("Appointment booked successfully!");
+
   return false;
+
 }
 
-/* Auto-fill service if passed from URL */
+
+
+/* =================================
+   AUTO FILL SERVICE FROM URL
+================================= */
+
 window.onload=function(){
 
   const params=new URLSearchParams(window.location.search);
+
   const service=params.get("service");
 
-  const serviceDropdown=document.getElementById("service");
+  const dropdown=document.getElementById("service");
 
-  if(service && serviceDropdown){
-    serviceDropdown.value=service;
+  if(service && dropdown){
+
+    dropdown.value=service;
+
   }
 
 };
