@@ -1,93 +1,159 @@
 window.dataLayer = window.dataLayer || [];
 
-function track(eventName){
-dataLayer.push({event:eventName})
+function trackEvent(eventName, element, page){
+
+dataLayer.push({
+event:eventName,
+element_name:element,
+page_name:page
+})
+
+console.log(eventName,element,page)
+
 }
 
+/* NAVIGATION */
+
 function goHome(){
-track("logo_click")
+
+trackEvent("navigation_click","logo","global")
+
 window.location.href="index.html"
+
 }
 
 function navigate(page){
-track("navigation_click")
+
+trackEvent("navigation_click","menu_navigation",page)
+
 window.location.href=page
+
 }
 
+/* SERVICES */
+
 function showService(service){
-track("service_details_click")
+
+trackEvent("service_view","service_details",service)
+
 alert("Viewing service details: "+service)
+
 }
 
 function bookService(service){
-track("service_booking_click")
+
+trackEvent("service_booking","book_service",service)
+
 alert("Booking started for "+service)
-window.location.href="booking.html?service="+service
+
+window.location.href="contact.html?service="+service
+
 }
+
+/* DOWNLOAD */
 
 function downloadFile(){
-track("brochure_download")
+
+trackEvent("file_download","service_brochure","services")
+
+alert("Downloading brochure")
 
 const link=document.createElement("a")
+
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
 link.download="AmbicaSalonBrochure.pdf"
+
 link.click()
+
 }
+
+/* TABS */
 
 function showTab(tab){
 
-track("review_tab_click")
+trackEvent("tab_click","review_tab",tab)
 
 document.getElementById("google").style.display="none"
 document.getElementById("insta").style.display="none"
 document.getElementById("youtube").style.display="none"
 
 document.getElementById(tab).style.display="block"
+
 }
+
+/* VIDEO */
 
 function videoStart(){
-track("video_start")
+
+trackEvent("video_start","salon_video","home")
+
+alert("Video started")
+
 }
 
+/* GALLERY */
+
 function openImage(name){
-track("gallery_image_click")
+
+trackEvent("gallery_view","gallery_image",name)
+
 alert("Viewing gallery: "+name)
+
 }
 
 function loadMoreGallery(){
-track("gallery_load_more")
+
+trackEvent("gallery_load","load_more","gallery")
+
 alert("More images loaded")
+
 }
 
+/* OFFERS */
+
 function applyOffer(code){
-track("offer_claim")
+
+trackEvent("offer_claim","claim_offer",code)
+
 alert("Offer applied: "+code)
+
 }
 
 function downloadCoupon(){
 
-track("coupon_download")
+trackEvent("coupon_download","offer_coupon","offers")
+
+alert("Downloading coupon")
 
 const link=document.createElement("a")
+
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+
 link.download="SalonCoupon.pdf"
+
 link.click()
+
 }
+
+/* FORM */
 
 function submitForm(){
 
-track("form_submit")
+trackEvent("form_submit","appointment_form","contact")
 
 let name=document.getElementById("name").value
 
 if(name==""){
-track("form_error")
 alert("Enter your name")
 return false
 }
 
 alert("Appointment booked successfully!")
+
 }
+
+/* PREFILL SERVICE */
 
 window.onload=function(){
 
