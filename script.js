@@ -1,24 +1,24 @@
-function goHome(){
+unction goHome(){
 window.location.href="index.html"
 }
 
 function bookService(service){
 
-alert("Booking for "+service+" selected")
+alert("Booking for "+service)
 
 window.location.href="contact.html?service="+encodeURIComponent(service)
 
 }
 
-function showService(name){
+function showService(service){
 
-alert(name+" service details page opened")
+alert("Showing details for "+service)
 
 }
 
 function downloadFile(){
 
-alert("Downloading Ambica Salon brochure")
+alert("Downloading salon brochure")
 
 const link=document.createElement("a")
 
@@ -42,21 +42,19 @@ document.getElementById(tab).style.display="block"
 
 function videoStart(){
 
-console.log("Video Started Event")
-
 alert("Video started")
 
 }
 
 function openImage(name){
 
-alert("Opening gallery preview: "+name)
+alert("Opening gallery: "+name)
 
 }
 
 function loadMoreGallery(){
 
-alert("Loading more gallery photos")
+alert("More gallery images loaded")
 
 }
 
@@ -68,13 +66,13 @@ alert("Offer applied: "+code)
 
 function downloadCoupon(){
 
-alert("Coupon downloaded")
+alert("Downloading coupon")
 
 const link=document.createElement("a")
 
 link.href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
 
-link.download="AmbicaSalonCoupon.pdf"
+link.download="SalonCoupon.pdf"
 
 link.click()
 
