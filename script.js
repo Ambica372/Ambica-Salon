@@ -36,7 +36,7 @@ function submitForm(){
 let name=document.getElementById("name").value
 
 if(name==""){
-alert("Please enter name")
+alert("Please enter your name")
 return false
 }
 
@@ -45,5 +45,20 @@ alert("Appointment submitted successfully!")
 }
 
 function viewGallery(img){
-alert("Viewing image: "+img)
+alert("Viewing gallery image: "+img)
+}
+
+function applyOffer(code){
+alert("Coupon Applied: " + code)
+}
+
+window.onload=function(){
+
+const params=new URLSearchParams(window.location.search)
+const service=params.get("service")
+
+if(service){
+document.getElementById("service").value=service
+}
+
 }
