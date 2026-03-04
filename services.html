@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id=
-GTM-5M3D67QG'+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','
-GTM-5M3D67QG');
-</script>
-<!-- End Google Tag Manager -->
-  
+
 <title>Services</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
+<script>
+function trackEvent(name){
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({event:name});
+}
+</script>
+
 </head>
 
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=
-GTM-5M3D67QG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-  
 <header>
 
-<div class="logo" onclick="goHome()">Ambica Salon</div>
+<h1>Ambica Salon</h1>
 
 <nav>
 <a href="index.html">Home</a>
@@ -40,64 +28,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <a href="contact.html">Contact</a>
 </nav>
 
-<button onclick="navigate('contact.html')">Book Appointment</button>
-
 </header>
 
-<section class="section">
+<section>
 
-<h2>Our Services</h2>
+<h2>Hair Styling</h2>
 
-<div class="card">
-<h3>Hair Cut</h3>
-<button onclick="showService('Hair Cut')">Details</button>
-<button onclick="bookService('Hair Cut')">Book</button>
-</div>
+<button onclick="trackEvent('hair_styling_click')">
+View Hair Styling
+</button>
 
-<div class="card">
-<h3>Facial</h3>
-<button onclick="showService('Facial')">Details</button>
-<button onclick="bookService('Facial')">Book</button>
-</div>
+<h2>Makeup</h2>
 
-<div class="card">
-<h3>Spa</h3>
-<button onclick="showService('Spa')">Details</button>
-<button onclick="bookService('Spa')">Book</button>
-</div>
+<button onclick="trackEvent('makeup_click')">
+View Makeup
+</button>
 
-<button onclick="downloadFile()">Download Price List</button>
+<a href="price-list.pdf" download onclick="trackEvent('price_list_download')">
+<button>Download Price List</button>
+</a>
 
 </section>
 
-
-
-
-
-<footer>
-
-<h3>Ambica Salon</h3>
-
-<p>Luxury Beauty & Hair Studio</p>
-
-<div class="footer-links">
-
-<a href="https://instagram.com" target="_blank">Instagram</a>
-
-<a href="https://facebook.com" target="_blank">Facebook</a>
-
-<a href="https://youtube.com" target="_blank">YouTube</a>
-
-</div>
-
-<p class="copyright">
-© 2026 Ambica Salon • All Rights Reserved
-</p>
-
-</footer>
-
-
-</body>
-</html>
 </body>
 </html>
