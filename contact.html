@@ -1,8 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Book Appointment - Ambica Salon</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo" onclick="goHome()">Ambica Salon</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="services.html">Services</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="offers.html">Offers</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<button onclick="navigate('contact.html')">Book Appointment</button>
+
+</header>
+
+
+
 <section class="section">
 
 <h2>Book Your Salon Appointment</h2>
 
-<p>Fill in your details and our stylist will confirm your appointment shortly.</p>
+<p>Fill in your details and our stylist will confirm your appointment.</p>
+
 
 <form onsubmit="submitForm(); return false;" class="booking-form">
 
@@ -13,23 +55,37 @@
 <input id="email" type="email" placeholder="Email Address">
 
 <select id="service">
+
 <option>Select Service</option>
+
 <option>Hair Styling</option>
+
 <option>Hair Cut</option>
+
 <option>Facial Treatment</option>
+
 <option>Bridal Makeup</option>
+
 <option>Spa</option>
+
 </select>
 
 <input type="date">
 
 <select>
+
 <option>Select Time</option>
+
 <option>10:00 AM</option>
+
 <option>12:00 PM</option>
+
 <option>2:00 PM</option>
+
 <option>4:00 PM</option>
+
 <option>6:00 PM</option>
+
 </select>
 
 <textarea placeholder="Special Request (Optional)"></textarea>
@@ -37,6 +93,11 @@
 <button type="submit">Confirm Appointment</button>
 
 </form>
+
+</section>
+
+
+
 <footer>
 
 <h3>Ambica Salon</h3>
@@ -58,4 +119,7 @@
 </p>
 
 </footer>
-</section>
+
+
+</body>
+</html>
