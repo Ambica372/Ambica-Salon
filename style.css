@@ -37,7 +37,7 @@ nav a:hover{
 color:#ffd1dc;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
 background-image:url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9");
@@ -96,7 +96,7 @@ border-radius:10px;
 margin-bottom:10px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 button{
 background:linear-gradient(45deg,#ff1493,#ff69b4);
@@ -115,7 +115,7 @@ transform:scale(1.05);
 background:linear-gradient(45deg,#c2185b,#ff1493);
 }
 
-/* TABS */
+/* REVIEW TABS */
 
 .tab-btn{
 background:#f06292;
@@ -129,7 +129,7 @@ border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* FORM */
+/* BOOKING FORM */
 
 .booking-form{
 width:360px;
@@ -168,6 +168,7 @@ color:#ff80ab;
 margin:0 10px;
 text-decoration:none;
 font-weight:500;
+transition:0.3s;
 }
 
 footer a:hover{
