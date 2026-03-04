@@ -16,18 +16,12 @@ align-items:center;
 .logo{
 font-size:24px;
 font-weight:bold;
-cursor:pointer;
 }
 
 nav a{
 color:white;
 margin:15px;
 text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
 }
 
 .hero{
@@ -41,7 +35,6 @@ background:#ff1493;
 color:white;
 padding:12px 25px;
 border:none;
-border-radius:5px;
 cursor:pointer;
 }
 
