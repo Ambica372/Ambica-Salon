@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Book Appointment - Ambica Salon</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function trackEvent(name){
+dataLayer.push({event:name});
+console.log(name);
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 onclick="location.href='index.html';trackEvent('logo_click')">
+Ambica Salon
+</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section>
+
+<h2>Book Your Appointment</h2>
+
+<form onsubmit="trackEvent('appointment_submit')">
+
+
+<label>Name</label>
+<br>
+<input type="text"
+required
+onfocus="trackEvent('name_field_focus')">
+
+
+<br><br>
+
+
+<label>Phone</label>
+<br>
+<input type="tel"
+required
+onfocus="trackEvent('phone_field_focus')">
+
+
+<br><br>
+
+
+<label>Select Service</label>
+<br>
+
+<select onchange="trackEvent('service_selected')">
+
+<option>Select Service</option>
+<option>Hair Styling</option>
+<option>Bridal Makeup</option>
+<option>Facial</option>
+
+</select>
+
+
+<br><br>
+
+
+<label>Select Date</label>
+<br>
+
+<input type="date"
+onfocus="trackEvent('date_field_focus')">
+
+
+<br><br>
+
+
+<button type="submit">
+
+Confirm Appointment
+
+</button>
+
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>Follow Ambica Salon</p>
+
+<a href="https://instagram.com" target="_blank"
+onclick="trackEvent('instagram_click')">
+
+Instagram
+
+</a>
+
+<a href="https://facebook.com" target="_blank"
+onclick="trackEvent('facebook_click')">
+
+Facebook
+
+</a>
+
+<a href="https://youtube.com" target="_blank"
+onclick="trackEvent('youtube_click')">
+
+YouTube
+
+</a>
+
+</footer>
+
+</body>
+
+</html>
