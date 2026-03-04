@@ -1,189 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Ambica Salon - Services</title>
+<title>Services</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
 <script>
-
 window.dataLayer = window.dataLayer || [];
+</script>
 
-function trackEvent(category, action, label){
-dataLayer.push({
-event: action,
-event_category: category,
-event_action: action,
-event_label: label
-});
-console.log(category, action, label);
-}
-
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s);
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5M3D67QG';
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
 
 </head>
 
 <body>
 
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
+height="0" width="0"></iframe>
+</noscript>
+
 <header>
 
-<h1 onclick="location.href='index.html'; trackEvent('Navigation','logo_click','header')">
-Ambica Salon
-</h1>
+<div class="logo" onclick="goHome()">Ambica Salon</div>
 
 <nav>
-
-<a href="index.html"
-onclick="trackEvent('Navigation','home_menu_click','header')">
-Home
-</a>
-
-<a href="services.html"
-onclick="trackEvent('Navigation','services_menu_click','header')">
-Services
-</a>
-
-<a href="gallery.html"
-onclick="trackEvent('Navigation','gallery_menu_click','header')">
-Gallery
-</a>
-
-<a href="offers.html"
-onclick="trackEvent('Navigation','offers_menu_click','header')">
-Offers
-</a>
-
-<a href="contact.html"
-onclick="trackEvent('Navigation','contact_menu_click','header')">
-Contact
-</a>
-
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
 </nav>
+
+<button onclick="navigate('contact.html')">Book Appointment</button>
 
 </header>
 
+<section class="section">
 
-<section>
+<h2>Our Services</h2>
 
-<h2>Our Premium Salon Services</h2>
-
-
-<div>
-
-<h3>Hair Styling</h3>
-
-<p>Professional haircut and styling services</p>
-
-<button
-onclick="trackEvent('CTA','hair_styling_click','services_page')">
-
-View Hair Styling
-
-</button>
-
+<div class="card">
+<h3>Hair Cut</h3>
+<button onclick="showService('Hair Cut')">Details</button>
+<button onclick="bookService('Hair Cut')">Book</button>
 </div>
 
-
-<div>
-
-<h3>Bridal Makeup</h3>
-
-<p>Complete bridal makeover packages</p>
-
-<button
-onclick="trackEvent('CTA','bridal_makeup_click','services_page')">
-
-View Bridal Makeup
-
-</button>
-
+<div class="card">
+<h3>Facial</h3>
+<button onclick="showService('Facial')">Details</button>
+<button onclick="bookService('Facial')">Book</button>
 </div>
 
-
-<div>
-
-<h3>Facial Treatments</h3>
-
-<p>Luxury skincare and glow facial treatments</p>
-
-<button
-onclick="trackEvent('CTA','facial_click','services_page')">
-
-View Facial Treatments
-
-</button>
-
+<div class="card">
+<h3>Spa</h3>
+<button onclick="showService('Spa')">Details</button>
+<button onclick="bookService('Spa')">Book</button>
 </div>
 
-
-<br><br>
-
-
-<a href="price-list.pdf"
-download
-onclick="trackEvent('Download','price_list_download','services_page')">
-
-<button>
-
-Download Price List
-
-</button>
-
-</a>
-
-
-<br><br>
-
-
-<button
-
-onclick="
-trackEvent('CTA','book_appointment_click','services_page');
-window.location.href='book.html';
-">
-
-Book Appointment
-
-</button>
-
+<button onclick="downloadFile()">Download Price List</button>
 
 </section>
 
-
 <footer>
-
-<p>Follow Ambica Salon</p>
-
-
-<a href="https://instagram.com"
-target="_blank"
-onclick="trackEvent('Outbound','instagram_click','footer')">
-
-Instagram
-
-</a>
-
-
-<a href="https://facebook.com"
-target="_blank"
-onclick="trackEvent('Outbound','facebook_click','footer')">
-
-Facebook
-
-</a>
-
-
-<a href="https://youtube.com"
-target="_blank"
-onclick="trackEvent('Outbound','youtube_click','footer')">
-
-YouTube
-
-</a>
-
-
+<a href="https://instagram.com">Instagram</a>
 </footer>
-
 
 </body>
 </html>
