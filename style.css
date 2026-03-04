@@ -1,4 +1,7 @@
+/* GOOGLE FONT */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 
 body{
 margin:0;
@@ -7,7 +10,10 @@ background:#fff4f8;
 color:#333;
 }
 
-/* HEADER */
+
+/* ======================
+   HEADER
+====================== */
 
 header{
 background:linear-gradient(90deg,#7a1c2e,#c2185b);
@@ -17,12 +23,18 @@ justify-content:space-between;
 align-items:center;
 color:white;
 box-shadow:0 4px 12px rgba(0,0,0,0.2);
+flex-wrap:wrap;
 }
 
 .logo{
 font-size:26px;
 font-weight:600;
 cursor:pointer;
+}
+
+nav{
+display:flex;
+align-items:center;
 }
 
 nav a{
@@ -37,7 +49,10 @@ nav a:hover{
 color:#ffd1dc;
 }
 
-/* HERO SECTION */
+
+/* ======================
+   HERO SECTION
+====================== */
 
 .hero{
 background-image:url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9");
@@ -59,7 +74,10 @@ font-size:20px;
 margin-bottom:25px;
 }
 
-/* SECTION */
+
+/* ======================
+   SECTIONS
+====================== */
 
 .section{
 padding:80px 40px;
@@ -72,7 +90,10 @@ color:#7a1c2e;
 margin-bottom:35px;
 }
 
-/* CARDS */
+
+/* ======================
+   CARDS
+====================== */
 
 .card{
 background:white;
@@ -83,6 +104,7 @@ padding:25px;
 border-radius:15px;
 box-shadow:0 8px 25px rgba(0,0,0,0.1);
 transition:0.3s;
+vertical-align:top;
 }
 
 .card:hover{
@@ -96,7 +118,10 @@ border-radius:10px;
 margin-bottom:10px;
 }
 
-/* BUTTONS */
+
+/* ======================
+   BUTTONS
+====================== */
 
 button{
 background:linear-gradient(45deg,#ff1493,#ff69b4);
@@ -115,13 +140,19 @@ transform:scale(1.05);
 background:linear-gradient(45deg,#c2185b,#ff1493);
 }
 
-/* REVIEW TABS */
+
+/* ======================
+   TABS
+====================== */
 
 .tab-btn{
 background:#f06292;
 }
 
-/* VIDEO */
+
+/* ======================
+   VIDEO
+====================== */
 
 video{
 margin-top:20px;
@@ -129,7 +160,10 @@ border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* BOOKING FORM */
+
+/* ======================
+   BOOKING FORM
+====================== */
 
 .booking-form{
 width:360px;
@@ -137,6 +171,10 @@ margin:auto;
 display:flex;
 flex-direction:column;
 gap:12px;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 .booking-form input,
@@ -153,7 +191,10 @@ height:80px;
 resize:none;
 }
 
-/* FOOTER */
+
+/* ======================
+   FOOTER
+====================== */
 
 footer{
 background:linear-gradient(90deg,#222,#444);
@@ -173,4 +214,38 @@ transition:0.3s;
 
 footer a:hover{
 color:white;
+}
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.card{
+width:90%;
+}
+
+.booking-form{
+width:90%;
+}
+
 }
