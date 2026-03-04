@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
+  <!-- Google Tag Manager -->
 <title>Ambica Salon</title>
 
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3CCNSMG9K"></script>
 <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id=
+GTM-5M3D67QG'+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','
+GTM-5M3D67QG');
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -17,53 +26,160 @@ dataLayer.push({event:name});
 console.log("Event:",name);
 }
 </script>
+<!-- End Google Tag Manager -->
 
+  
+<title>Ambica Salon</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
 </head>
 
 <body>
 
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=
+GTM-5M3D67QG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+  
 <header>
 
+<div class="logo" onclick="goHome()">Ambica Salon</div>
 <h1 onclick="trackEvent('logo_click')">Ambica Salon</h1>
 
 <nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
+<button onclick="navigate('contact.html')">Book Appointment</button>
+
+</header>
+
+<section class="hero">
+
+<h1>Luxury Beauty Experience</h1>
+
+<p>Hair • Skin • Bridal</p>
+
+<button onclick="navigate('services.html')">Explore Services</button>
+
+</section>
+
+<section class="section">
+
+<h2>Popular Services</h2>
+
+<div class="card">
+
+<h3>Hair Styling</h3>
+
+<button onclick="showService('Hair Styling')">See Details</button>
+
+<button onclick="bookService('Hair Styling')">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<h3>Facial Treatment</h3>
+
+<button onclick="showService('Facial Treatment')">See Details</button>
 <a href="index.html" onclick="trackEvent('menu_home_click')">Home</a>
 <a href="services.html" onclick="trackEvent('menu_services_click')">Services</a>
 <a href="gallery.html" onclick="trackEvent('menu_gallery_click')">Gallery</a>
 <a href="offers.html" onclick="trackEvent('menu_offers_click')">Offers</a>
 <a href="contact.html" onclick="trackEvent('menu_contact_click')">Contact</a>
 
+<button onclick="bookService('Facial Treatment')">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<h3>Bridal Makeup</h3>
+
+<button onclick="showService('Bridal Makeup')">See Details</button>
+
+<button onclick="bookService('Bridal Makeup')">Book Now</button>
+
+</div>
+
+<button onclick="downloadFile()">Download Service Brochure</button>
+
+</section>
+
+<section class="section">
+
+<h2>Customer Reviews</h2>
+
+<button class="tab-btn" onclick="showTab('google')">Google</button>
 </nav>
 
+<button class="tab-btn" onclick="showTab('insta')">Instagram</button>
 <button onclick="trackEvent('book_appointment_click');location.href='contact.html'">
 Book Appointment
 </button>
 
+<button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
 </header>
 
+<div id="google">
+<p>⭐⭐⭐⭐⭐ Best salon experience</p>
+</div>
 <section>
 
+<div id="insta" style="display:none">
+<p>Instagram clients love our services</p>
+</div>
 <h2>Welcome to Ambica Salon</h2>
 
+<div id="youtube" style="display:none">
+<p>Watch transformations on YouTube</p>
+</div>
 <p>Luxury hair and beauty services.</p>
 
 </section>
 
+<section class="section">
 <section>
 
+<h2>Salon Experience Video</h2>
 <h2>Salon Video</h2>
 
+<video width="500" controls onplay="videoStart()">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4">
 <video width="400" controls onclick="trackEvent('video_play')">
 <source src="salon.mp4" type="video/mp4">
 </video>
 
 </section>
-
 <footer>
 
+<h3>Ambica Salon</h3>
+
+<p>Luxury Beauty & Hair Studio</p>
+
+<div class="footer-links">
+
+<a href="https://instagram.com" target="_blank">Instagram</a>
+
+<a href="https://facebook.com" target="_blank">Facebook</a>
+
+<a href="https://youtube.com" target="_blank">YouTube</a>
+
+</div>
+<footer>
+
+<p class="copyright">
+© 2026 Ambica Salon • All Rights Reserved
+</p>
 <a href="https://instagram.com" target="_blank" onclick="trackEvent('instagram_click')">Instagram</a>
 <a href="https://facebook.com" target="_blank" onclick="trackEvent('facebook_click')">Facebook</a>
 <a href="https://youtube.com" target="_blank" onclick="trackEvent('youtube_click')">YouTube</a>
