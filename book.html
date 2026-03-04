@@ -23,7 +23,6 @@ f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5M3D67QG');
 </script>
 
-
 <script>
 
 function trackEvent(eventName, element, page){
@@ -38,14 +37,13 @@ console.log(eventName,element,page);
 
 }
 
-/* prevent form reload and fire event */
 function submitAppointment(){
 
-trackEvent('form_submit','appointment_form','appointment')
+trackEvent('form_submit','appointment_form','book');
 
-alert("Appointment submitted successfully")
+alert("Appointment submitted successfully");
 
-return false
+return false;
 
 }
 
@@ -55,21 +53,20 @@ return false
 
 <body>
 
-
 <!-- GTM NOSCRIPT -->
 
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3D67QG"
-height="0" width="0" style="display:none;visibility:hidden">
-</iframe>
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 
 <header>
 
-<h1 onclick="trackEvent('navigation_click','logo','global');location.href='index.html';">
+<div class="logo"
+onclick="trackEvent('navigation_click','logo','header');location.href='index.html';">
 Ambica Salon
-</h1>
+</div>
 
 <nav>
 
@@ -102,87 +99,60 @@ Contact
 
 <button
 onclick="trackEvent('cta_click','book_appointment_header','header');location.href='book.html';">
-
 Book Appointment
-
 </button>
 
 </header>
 
 
 
-<section>
+<section class="section">
 
 <h2>Book Your Appointment</h2>
 
-
-<form onsubmit="return submitAppointment()">
+<form class="booking-form" onsubmit="return submitAppointment()">
 
 
 <label>Name</label>
 
-<br>
-
 <input type="text"
 required
-onfocus="trackEvent('form_focus','name_field','appointment')">
-
-
-<br><br>
+onfocus="trackEvent('form_focus','name_field','book')">
 
 
 
 <label>Phone</label>
 
-<br>
-
 <input type="tel"
 required
-onfocus="trackEvent('form_focus','phone_field','appointment')">
-
-
-<br><br>
+onfocus="trackEvent('form_focus','phone_field','book')">
 
 
 
 <label>Select Service</label>
 
-<br>
-
-<select onchange="trackEvent('service_selected','service_dropdown','appointment')">
+<select onchange="trackEvent('service_selected','service_dropdown','book')">
 
 <option>Select Service</option>
-
 <option>Hair Styling</option>
-
 <option>Bridal Makeup</option>
-
 <option>Facial</option>
+<option>Spa</option>
 
 </select>
-
-
-<br><br>
 
 
 
 <label>Select Date</label>
 
-<br>
-
 <input type="date"
-onfocus="trackEvent('form_focus','date_field','appointment')">
-
-
-<br><br>
+onfocus="trackEvent('form_focus','date_field','book')">
 
 
 
 <button type="submit"
-onclick="trackEvent('cta_click','confirm_appointment','appointment')">
-
+onclick="trackEvent('cta_click','confirm_appointment','book')">
 Confirm Appointment
-
 </button>
 
 
@@ -194,38 +164,35 @@ Confirm Appointment
 
 <footer>
 
-<p>Follow Ambica Salon</p>
+<h3>Ambica Salon</h3>
 
+<p>Luxury Beauty & Hair Studio</p>
+
+<div class="footer-links">
 
 <a href="https://instagram.com"
 target="_blank"
 onclick="trackEvent('outbound_click','instagram','footer')">
-
 Instagram
-
 </a>
-
 
 <a href="https://facebook.com"
 target="_blank"
 onclick="trackEvent('outbound_click','facebook','footer')">
-
 Facebook
-
 </a>
-
 
 <a href="https://youtube.com"
 target="_blank"
 onclick="trackEvent('outbound_click','youtube','footer')">
-
 YouTube
-
 </a>
 
+</div>
+
+<p>© 2026 Ambica Salon</p>
 
 </footer>
-
 
 </body>
 </html>
