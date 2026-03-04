@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Ambica Salon</title>
 <link rel="stylesheet" href="style.css">
+
+<script>
+
+function showTab(tab){
+
+document.getElementById("google").style.display="none";
+document.getElementById("insta").style.display="none";
+document.getElementById("youtube").style.display="none";
+
+document.getElementById(tab).style.display="block";
+
+}
+
+function downloadBrochure(){
+
+alert("Service brochure downloaded!");
+
+}
+
+function bookScroll(){
+
+window.location.href="contact.html"
+
+}
+
+</script>
+
 </head>
 
 <body>
@@ -12,14 +40,16 @@
 <div class="logo">Ambica Salon</div>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="gallery.html">Gallery</a>
 <a href="offers.html">Offers</a>
 <a href="contact.html">Contact</a>
+
 </nav>
 
-<button class="cta">Book Appointment</button>
+<button class="cta" onclick="bookScroll()">Book Appointment</button>
 
 </header>
 
@@ -27,9 +57,10 @@
 <section class="hero">
 
 <h1>Luxury Beauty Experience</h1>
+
 <p>Hair • Skin • Bridal • Spa</p>
 
-<button class="cta">Explore Services</button>
+<button class="cta" onclick="bookScroll()">Book Now</button>
 
 </section>
 
@@ -58,7 +89,7 @@
 
 <br><br>
 
-<button class="download-btn">Download Service Brochure</button>
+<button class="download-btn" onclick="downloadBrochure()">Download Service Brochure</button>
 
 </section>
 
@@ -67,9 +98,21 @@
 
 <h2>Customer Reviews</h2>
 
-<button class="tab-btn">Google Reviews</button>
-<button class="tab-btn">Instagram Reviews</button>
-<button class="tab-btn">YouTube Reviews</button>
+<button class="tab-btn" onclick="showTab('google')">Google Reviews</button>
+<button class="tab-btn" onclick="showTab('insta')">Instagram Reviews</button>
+<button class="tab-btn" onclick="showTab('youtube')">YouTube Reviews</button>
+
+<div id="google">
+<p>⭐⭐⭐⭐⭐ Amazing salon experience!</p>
+</div>
+
+<div id="insta" style="display:none">
+<p>Customers love our styling on Instagram.</p>
+</div>
+
+<div id="youtube" style="display:none">
+<p>Watch transformation videos on YouTube.</p>
+</div>
 
 </section>
 
@@ -79,7 +122,9 @@
 <h2>Salon Experience</h2>
 
 <video width="500" controls>
+
 <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+
 </video>
 
 </section>
@@ -89,9 +134,9 @@
 
 <p>Follow Us</p>
 
-<a href="https://instagram.com">Instagram</a>
-<a href="https://facebook.com">Facebook</a>
-<a href="https://youtube.com">YouTube</a>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+<a href="https://facebook.com" target="_blank">Facebook</a>
+<a href="https://youtube.com" target="_blank">YouTube</a>
 
 </footer>
 
