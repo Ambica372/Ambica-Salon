@@ -2,149 +2,7 @@
 <html>
 <head>
 <title>Ambica Salon</title>
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#fff0f6;
-}
-
-/* HEADER */
-
-header{
-background:#c2185b;
-color:white;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:26px;
-font-weight:bold;
-cursor:pointer;
-}
-
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-text-decoration:underline;
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(to right,#ff9a9e,#fad0c4);
-padding:80px;
-text-align:center;
-}
-
-.cta{
-background:#ff1493;
-color:white;
-padding:15px 25px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* SERVICES */
-
-.services{
-padding:60px;
-text-align:center;
-}
-
-.card{
-background:white;
-padding:25px;
-margin:20px;
-width:250px;
-display:inline-block;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* TABS */
-
-.tabs{
-text-align:center;
-padding:40px;
-}
-
-.tab-btn{
-padding:10px 20px;
-margin:5px;
-cursor:pointer;
-background:#f06292;
-color:white;
-border:none;
-}
-
-/* DOWNLOAD */
-
-.download-btn{
-background:#4CAF50;
-color:white;
-padding:10px 20px;
-border:none;
-cursor:pointer;
-margin-top:20px;
-}
-
-/* VIDEO */
-
-.video-section{
-padding:50px;
-text-align:center;
-background:#ffe4ec;
-}
-
-/* FORM */
-
-.form-section{
-padding:60px;
-text-align:center;
-}
-
-input{
-padding:10px;
-margin:10px;
-width:250px;
-}
-
-.submit{
-background:#c2185b;
-color:white;
-padding:10px 20px;
-border:none;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#333;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-footer a{
-color:#ff80ab;
-margin:10px;
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -154,10 +12,11 @@ margin:10px;
 <div class="logo">Ambica Salon</div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 <button class="cta">Book Appointment</button>
@@ -167,9 +26,8 @@ margin:10px;
 
 <section class="hero">
 
-<h1>Welcome to Ambica Salon</h1>
-
-<p>Hair • Makeup • Skin Care • Bridal</p>
+<h1>Luxury Beauty Experience</h1>
+<p>Hair • Skin • Bridal • Spa</p>
 
 <button class="cta">Explore Services</button>
 
@@ -178,25 +36,27 @@ margin:10px;
 
 <section class="services">
 
-<h2>Our Services</h2>
+<h2>Popular Services</h2>
 
 <div class="card">
 <h3>Hair Styling</h3>
-<p>Professional haircut and styling.</p>
+<p>Professional haircut and styling</p>
 <button class="cta">See Details</button>
 </div>
 
 <div class="card">
 <h3>Facial Treatment</h3>
-<p>Glow facial and skin treatment.</p>
+<p>Glow facial treatment</p>
 <button class="cta">See Details</button>
 </div>
 
 <div class="card">
 <h3>Bridal Makeup</h3>
-<p>Complete bridal makeover.</p>
+<p>Luxury bridal makeover</p>
 <button class="cta">See Details</button>
 </div>
+
+<br><br>
 
 <button class="download-btn">Download Service Brochure</button>
 
@@ -216,31 +76,11 @@ margin:10px;
 
 <section class="video-section">
 
-<h2>Salon Experience Video</h2>
+<h2>Salon Experience</h2>
 
 <video width="500" controls>
-
-<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-
+<source src="https://www.w3schools.com/html/mov_bbb.mp4">
 </video>
-
-</section>
-
-
-<section class="form-section">
-
-<h2>Book Your Appointment</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name"><br>
-<input type="text" placeholder="Phone Number"><br>
-<input type="email" placeholder="Email"><br>
-<input type="text" placeholder="Service Interested"><br>
-
-<button class="submit">Submit Booking</button>
-
-</form>
 
 </section>
 
