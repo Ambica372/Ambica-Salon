@@ -198,11 +198,12 @@ onclick="trackEvent('outbound_click','youtube','footer')">YouTube</a>
 <script>
 
 document.addEventListener(DOMContentLoaded,function(){
-var btn=document.getElementByID("btn-hair").addEventListener("click",function(){
+var btn=document.getElementByID("btn-hair");
+  btn.addEventListener("click",function(){
 
   dataLayer.push{(
 
-event:"book_now_click"
+event:"book_now_click",
 service_name:this.getAttribute("service_name")
 
 
